@@ -521,7 +521,7 @@ header{
 
 .skill-bar-percent {
 	position:absolute;
-	top:-24px;
+	top:5px;
 	font-size:14px;
 	color:#796f7a;
 	margin-left:-20px;
