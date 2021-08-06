@@ -6,7 +6,7 @@ export default function Navbar() {
       <nav className="flex shadow-lg rounded-lg bg-gray-700">
         <div className="hidden md:block mt-1 mx-1 ml-3">
           <img
-            src="nrue.github.io/icons/diamond.svg"
+            src="/icons/diamond.svg"
             className="h-8 w-8 p-2 m-2"
             height={50}
             width={50}
