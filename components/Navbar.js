@@ -1,16 +1,13 @@
+import Typewriter from "typewriter-effect";
+
 export default function Navbar() {
   const diamondIcon = "/icons/diamond.svg";
 
   return (
     <div className="flex h-16 bg-image bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500">
-      <nav className="flex shadow-lg rounded-lg bg-gray-700">
-        <div className="hidden md:block mt-1 mx-1 ml-3">
-          <img
-            src="/icons/diamond.svg"
-            className="h-8 w-8 p-2 m-2"
-            height={50}
-            width={50}
-          />
+      <nav className="flex m-1 shadow-lg rounded-lg bg-gray-700">
+        <div className="hidden md:flex p-1 mt-1 mx-1 ml-3">
+          <img src="/icons/diamond.png" max-height="100%" max-width="100%" />
         </div>
         <div className="lg:px-4 mr-4 pt-0">
           <div className="flex justify-between">
@@ -33,7 +30,7 @@ export default function Navbar() {
                   href=""
                   className="py-4 px-2 text-gray-300 font-semibold hover:text-green-500 transition duration-300"
                 >
-                  Services
+                  Projects
                 </a>
                 <a
                   href=""
@@ -45,13 +42,20 @@ export default function Navbar() {
                   href=""
                   className="py-4 px-2 text-gray-300 font-semibold hover:text-green-500 transition duration-300"
                 >
-                  Contact Us
+                  Contact
                 </a>
               </div>
             </div>
           </div>
         </div>
       </nav>
+      <Typewriter
+        options={{
+          strings: ["React.js", "Node.js", "Software Design", "RESTful"],
+          autoStart: true,
+          loop: true,
+        }}
+      />
     </div>
   );
 }

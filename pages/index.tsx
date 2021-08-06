@@ -1,9 +1,12 @@
+import Typewriter from "typewriter-effect";
+
 import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
 
 import Navbar from "../components/Navbar";
 import Tile from "../components/Tile";
+import Footer from "../components/Footer";
 
 export default function Home() {
   const starsImage = "/images/img-stars.webp";
@@ -28,7 +31,7 @@ export default function Home() {
   };
 
   return (
-    <div className="w-screen h-screen">
+    <div className="w-auto h-auto overflow-y-scroll overflow-x-hidden">
       <Head>
         <title>Developer Bio</title>
         <link rel="icon" href="/favicon.ico" />
@@ -37,9 +40,12 @@ export default function Home() {
       <body className="bg-gray-900 h-screen">
         <Navbar />
         <div className="lg:inline-flex w-screen">
-          <div className="lg:w-1/2 pt-10">
-            <h1 className="text-center text-white text-3xl"> Bio </h1>
-            <div className="m-5 p-5 w-sm lg:w-full text-white">
+          <div
+            className="bg-fixed bg-cover rounded-2xl lg:w-1/2 pt-10"
+            style={{ backgroundImage: `url(/images/img-mountain-sky.jpg)` }}
+          >
+            <h1 className="text-center text-white text-3xl">Bio</h1>
+            <div className="h-auto w-auto m-5 p-5 pr-12 w-sm lg:w-full text-white">
               {mockItems.map(() => {
                 return (
                   <p className="my-4">
@@ -54,9 +60,18 @@ export default function Home() {
                 );
               })}
             </div>
+            {/*
+              <img
+                className="abosulte flex h-auto w-auto"
+                alt="Mountains"
+                src="/images/img-mountain-sky.jpg"
+                max-width="100%"
+                max-height="100%"
+              />
+            */}
           </div>
-          <div className="lg:w-1/2 h-screen overflow-scroll bg-gradient-to-bl from-pink-500 via-red-500 to-yellow-400">
-            <div className="absolute h-screen w-screen">
+          <div className="lg:w-1/2 h-screen overflow-y-scroll rounded-2xl scrollbar-hide bg-gradient-to-bl from-pink-500 via-red-500 to-yellow-400">
+            <div className="absolute h-auto w-auto">
               {/* cant use image loader with static site 
               <Image
                 alt="Mountains"
@@ -84,6 +99,7 @@ export default function Home() {
           </div>
         </div>
       </body>
+      <Footer></Footer>
     </div>
   );
 }

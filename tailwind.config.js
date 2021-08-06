@@ -9,5 +9,5 @@ module.exports = {
       gridAutoFlow: ["hover", "focus"],
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar-hide")],
 };
