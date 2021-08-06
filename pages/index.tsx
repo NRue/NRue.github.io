@@ -41,7 +41,7 @@ export default function Home() {
         <Navbar />
         <div className="lg:inline-flex w-screen">
           <div
-            className="bg-fixed bg-cover m-1 rounded-2xl lg:w-1/2 pt-10"
+            className="bg-fixed bg-auto md:bg-cover m-1 rounded-2xl lg:w-1/2 pt-10"
             style={{ backgroundImage: `url(/images/img-mountain-sky.jpg)` }}
           >
             <h1 className="text-center text-white text-3xl">Bio</h1>
