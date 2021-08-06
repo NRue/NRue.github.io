@@ -31,17 +31,17 @@ export default function Home() {
   };
 
   return (
-    <div className="w-auto h-auto overflow-y-scroll overflow-x-hidden">
+    <div className="w-auto h-auto overflow-y-show overflow-x-hidden">
       <Head>
         <title>Developer Bio</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <body className="bg-gray-900 h-screen">
+      <body className="bg-gray-900 h-screen overflow-show">
         <Navbar />
         <div className="lg:inline-flex w-screen">
           <div
-            className="bg-fixed bg-cover rounded-2xl lg:w-1/2 pt-10"
+            className="bg-fixed bg-cover m-1 rounded-2xl lg:w-1/2 pt-10"
             style={{ backgroundImage: `url(/images/img-mountain-sky.jpg)` }}
           >
             <h1 className="text-center text-white text-3xl">Bio</h1>
@@ -70,7 +70,10 @@ export default function Home() {
               />
             */}
           </div>
-          <div className="lg:w-1/2 h-screen overflow-y-scroll rounded-2xl scrollbar-hide bg-gradient-to-bl from-pink-500 via-red-500 to-yellow-400">
+          <div
+            className="lg:w-1/2 m-1 h-screen overflow-y-scroll rounded-2xl scrollbar-hide 
+                          bg-gradient-to-bl from-pink-500 via-red-500 to-yellow-400"
+          >
             <div className="absolute h-auto w-auto">
               {/* cant use image loader with static site 
               <Image
@@ -98,8 +101,9 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        <Footer></Footer>
       </body>
-      <Footer></Footer>
     </div>
   );
 }
